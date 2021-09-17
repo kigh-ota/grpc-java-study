@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package deepthought;
+
+message BootRequest {}
+
+message BootResponse {
+  string message = 1; // integer id
+}
+
+message InferRequest {
+  string query = 1;
+}
+
+message InferResponse {
+  sint64 answer = 1;
+  repeated string description = 2;
+}
+
+service Compute {
+  rpc Boot(BootRequest) returns (stream BootResponse);
+
+  rpc Infer(InferRequest) returns (InferResponse); // Unary RPC
+}
