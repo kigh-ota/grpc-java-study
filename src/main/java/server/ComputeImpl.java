@@ -46,7 +46,7 @@ public class ComputeImpl
         var deadline = Context.current().getDeadline();
         System.err.printf("Deadline=%s\n", deadline);
         if (deadline == null || deadline.timeRemaining(TimeUnit.MILLISECONDS) > 750) {
-            var response = InferResponse.newBuilder().setAnswer(42).setDescription(0, "I checked it").build();
+            var response = InferResponse.newBuilder().setAnswer(42).addDescription("I checked it").build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
             return;
