@@ -15,6 +15,7 @@ repositories {
 dependencies {
     implementation("com.google.protobuf:protobuf-java:3.10.0")
     implementation("io.grpc:grpc-all:1.25.0")
+    implementation("javax.annotation:javax.annotation-api:1.3.2")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")

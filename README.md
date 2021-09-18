@@ -8,3 +8,9 @@ Do https://github.com/ymmt2005/grpc-tutorial using Java and Spring Boot.
         - RPCs in `grpc/`
 - Implementation
     - TODO
+
+## References
+
+- https://github.com/ymmt2005/grpc-tutorial
+- https://www.baeldung.com/grpc-introduction
+- https://grpc.io/docs/languages/java/basics/
